@@ -14,3 +14,14 @@ function drop(event) {
   draggedElement.innerHTML = dropTarget.innerHTML;
   dropTarget.innerHTML = tempText;
 }
+function allowDrop(event) {
+  event.preventDefault();
+}
+
+function drag(event) {
+  event.dataTransfer.setData("text", event.target.id);
+}
+
+function dragEnd(event) {
+  event.dataTransfer.clearData();
+}
