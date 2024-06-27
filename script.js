@@ -4,8 +4,8 @@ function drop(event) {
   var draggedElement = document.getElementById(data);
   var dropTarget = event.target;
 
-  // Check if the drop target is a div
-  if (dropTarget.nodeName === "DIV") {
+  // Check if the draggedElement and dropTarget are not undefined
+  if (draggedElement && dropTarget && dropTarget.nodeName === "DIV") {
     // Swap background images
     var temp = draggedElement.style.backgroundImage;
     draggedElement.style.backgroundImage = dropTarget.style.backgroundImage;
