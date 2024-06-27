@@ -12,6 +12,7 @@ function drop(event) {
     dropTarget.style.backgroundImage = temp;
   }
 }
+
 function allowDrop(event) {
   event.preventDefault();
 }
