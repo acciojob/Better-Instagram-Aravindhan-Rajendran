@@ -4,11 +4,15 @@ function drop(event) {
   var draggedElement = document.getElementById(data);
   var dropTarget = event.target;
 
+	var tempText = draggedElement.innerHTML;
+draggedElement.innerHTML = dropTarget.innerHTML;
+dropTarget.innerHTML = tempText;
+
   // Swap background images
   var temp = draggedElement.style.backgroundImage;
   draggedElement.style.backgroundImage = dropTarget.style.backgroundImage;
   dropTarget.style.backgroundImage = temp;
-
+	
   // Swap innerHTML
   var tempText = draggedElement.innerHTML;
   draggedElement.innerHTML = dropTarget.innerHTML;
